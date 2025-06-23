@@ -1,3 +1,28 @@
+#模拟
+#  题意
+- 给定若干组数组，每组数组给出长度n和询问k
+- 输出第k大的数
+# 思路
+- 水题，直接硬模拟+排序即可
+- 注意输入量很大，需要使用快读
+```cpp
+inline int read(){
+    int x = 0, f = 1;
+    char ch = getchar();
+    while(ch < '0' || ch > '9'){
+        if (ch == '-')
+            f = -1;
+        ch = getchar();
+    }
+    while(ch >= '0' && ch <= '9'){
+        x = (x<<1) + (x<<3) + (ch^48);
+        ch = getchar();
+    }
+    return x * f;
+}
+```
+# 代码
+```cpp
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -37,3 +62,4 @@ int main(){
 
     return 0;
 }
+```
