@@ -1,0 +1,14 @@
+{
+  "showLineNumber": false,
+  "attachmentFolderPath": "./附件",
+  "promptDelete": false,
+  "newFileLocation": "current",
+  "readableLineLength": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}

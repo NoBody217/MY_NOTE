@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "4e5c90fabb24c94c",
+    "type": "split",
+    "children": [
+      {
+        "id": "d32942ec6918aad6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "31ee910193783ee1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "StartFromVim/step2.27个常用命令.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "step2.27个常用命令"
+            }
+          },
+          {
+            "id": "2f86d5746cbd0d37",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "奇怪的数据结构/B-树与B+树.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "B-树与B+树"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "65387c7d4bbeb165",
+    "type": "split",
+    "children": [
+      {
+        "id": "c36c707943066ff7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8631f05d4458cb16",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "6bf142557d5025ed",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "93620179d3aa8f39",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 338.5
+  },
+  "right": {
+    "id": "1dc387fb92948402",
+    "type": "split",
+    "children": [
+      {
+        "id": "e3d4fe0db5d0c7b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf52142fa5855335",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "📘排序与实现（7种常见）.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "📘排序与实现（7种常见） 的反向链接列表"
+            }
+          },
+          {
+            "id": "5f31c6695c917117",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "📘排序与实现（7种常见）.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "📘排序与实现（7种常见） 的出链列表"
+            }
+          },
+          {
+            "id": "47841582622e2dc4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "0af60878b53dd71b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "StartFromVim/Step 1.从MIT的missing_semester开始.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Step 1.从MIT的missing_semester开始 的大纲"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "2f86d5746cbd0d37",
+  "lastOpenFiles": [
+    "题解/算法入门-NOIP2009分数线划定.md",
+    "题解/算法入门-NOIP2005过河.md",
+    "StartFromVim/step2.27个常用命令.md",
+    "StartFromVim/Step 1.从MIT的missing_semester开始.md",
+    "📘排序与实现（7种常见）.md",
+    "Learn Linux/Linux 命令.md",
+    "Learn Linux/Ubuntu 操作.md",
+    "TASKS.md",
+    "StartFromVim/().md",
+    "StartFromVim",
+    "图(Graph).md",
+    "听？.md",
+    "树(TREE).md",
+    "查找排序.md",
+    "奇怪的数据结构/B-树与B+树.md",
+    "排序与查找笔记.md",
+    "奇怪的数据结构",
+    "附件/e4012c41-3c5e-4d5d-bf5b-6ef0bf7bd1f5.png",
+    "附件/feff0262edb215215ba2c89349c8551d.png",
+    "题解/ABC406.md",
+    "题解/算法入门-树上子链.md",
+    "题解/算法入门-二叉苹果树(边权转点权).md",
+    "题解/NKmounth-Round-116(赛时ABC，补DF).md",
+    "题解/NKweek-Round-92(赛时ABCD，补EF).md",
+    "题解/最小点覆盖-最小边覆盖-最小支配集.md",
+    "题解/算法入门-(USACO 2008 Jan G)Cell Phone Network(最小支配集).md",
+    "题解/算法入门-Strategic Game(最小点覆盖).md",
+    "题解/算法入门-没有上司的舞会.md",
+    "题解/算法入门-小G有一个大树.md",
+    "Learn Linux/未命名.md",
+    "题解",
+    "附件/ffea169b-4208-4655-a7dd-ebb399994c48.png",
+    "附件",
+    "附件/b659e268-608a-45a7-97cb-60a2bc53c638.png",
+    "附件/90a52764-fda0-4d69-b725-f7e58fc50679.png",
+    "Learn Linux"
+  ]
+}
