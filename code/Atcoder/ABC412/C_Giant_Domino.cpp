@@ -1,42 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-long long a[202020];
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-
+const int N = 2e5+7;
+int a[N];
+int main (){
     int t;
     cin >> t;
-    //有可能中间的牌放完了但不够推倒最后一个
-    while (t--) {
-        int n;
+    while(t--){
+        int n,m=0;
         cin >> n;
-        for (int i = 0; i < n; i++) cin >> a[i];
-        vector<long long> mid;
-        for (int i = 1; i < n - 1; i++) mid.push_back(a[i]);
-        sort(mid.begin(), mid.end());
-        long long cur = a[0];
-        int used = 1;
-        int i = 0;
-        while (i<mid.size()&&cur*2<a[n - 1]) {
-            int j=upper_bound(mid.begin(),mid.end(),2*cur)-mid.begin();
-            if (j==i){
-                used=-1;
-                break;
-            }
-            cur=mid[j-1];
-            used++;
-            i=j;
+        for(int i=1;i<=n;i++){
+            cin >> a[i];
         }
-        if(used!=-1){
-            if(cur*2<a[n-1])
-                used=-1;
-            else
-                used++;
+        int A=a[1],B=a[n];
+        if(A*2>=B){ cout << 2 << endl; continue; }
+
+        for(int i=1;i<=n;i++){
+            if(a[i]>A&&a[i]<B) a[++m]=a[i];
         }
-        cout << used << '\n';
+
+        sort(a+1,a+m+1);
+        int ans=2,cur=A;
+
+        for(int i=1;i<=m;){
+            if(a[i]>2*cur){ ans=-1; break; }
+            int j=i;
+            while(j<m&&a[j+1]<=2*cur)j++;
+            cur=a[j];
+            ans++;
+            if(cur*2>=B) break;
+            i=j+1;
+        }
+        if(cur*2<B) ans=-1;
+        cout << ans  << endl;
     }
     return 0;
 }
