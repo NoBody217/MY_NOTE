@@ -1,0 +1,65 @@
+#include<bits/stdc++.h>
+#define int long long
+using namespace std;
+/**
+ * 对于一块板子
+ * 用前缀和维护刷一次能刷对多少max(sum[r]-sum[l-1],(r-l+1)-sum[r]-sum[l-1])
+ * f[i][j]表示刷i次，刷到j
+ * f[i][j]=f[i-1][l]+sum(l,j)
+ * 加一维，维护每一个板子
+ * 对于n块板子
+ * G[k][i][j]表示前k块板子，刷i次，最后一块板子刷j次
+ * G[k][i][j]=G[k-1][i-j][p]
+ * 
+ */
+
+const int N=60;
+int mp[N][N],sum[N][N],f[N][3000][N],g[N][3000][N];
+
+int cal(int idx,int l,int r){
+    return max(sum[idx][r]-sum[idx][l-1],(r-l+1)-sum[idx][r]+sum[idx][l-1]);
+}
+
+signed main(){
+    int n,m,t;
+    cin >> n >> m >> t;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=m;j++){
+            scanf("%1d",&mp[i][j]);
+            sum[i][j]=sum[i][j-1]+mp[i][j];
+        }
+    }
+    for(int cnt=1;cnt<=n;cnt++){
+        for(int i=1;i<=t;i++){//存在i-1,i必须从1开始
+            for(int j=1;j<=m;j++){
+                for(int l=0;l<=j;l++){//上一步可以从0开始，表示什么都没刷
+                    f[cnt][i][j]=max(f[cnt][i][j],f[cnt][i-1][l]+cal(cnt,l+1,j));
+                }
+            }
+        }
+        // cout << f[cnt][t][m] << endl ;
+        // for(int i=1;i<=t;i++){
+        //     for(int j=1;j<=m;j++){
+        //         cout << f[cnt][i][j] << ' ';
+        //     }
+        //     cout << endl;
+        // }
+    }
+    for(int k=1;k<=n;k++){
+        for(int i=1;i<=t;i++){
+            for(int j=1;j<=m;j++){//最后一次刷的如果是0就没意义
+                for(int p=0;p<=m;p++){//上一次刷的可以是0表示开始
+                    if(j>i) continue;
+                    g[k][i][j]=max(g[k][i][j],g[k-1][i-j][p]+f[k][j][m]);
+                }
+            }
+        }
+    }
+
+    int ans=0;
+    for(int i=0;i<=m;i++){
+        ans=max(ans,g[n][t][i]);
+    }
+    cout << ans << endl;
+    return 0;
+}
