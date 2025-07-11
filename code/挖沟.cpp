@@ -1,0 +1,117 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int n,m;
+
+typedef struct{
+    int x,y,z;
+}E;
+
+E edge[1010111];
+int fa[101010];
+
+
+int cmp(E a,E b){
+    return a.z<b.z;
+}
+
+int find(int x){
+    return fa[x]==x?x:fa[x]=find(fa[x]);
+}
+
+int main(){
+    cin >> n >> m;
+    for(int i=1;i<=n;i++) fa[i]=i;
+    for(int i=1;i<=m;i++){
+        int a,b,v;
+        cin >> edge[i].x >> edge[i].y >> edge[i].z;   
+    }
+    sort(edge+1,edge+m+1,cmp);
+    int ans=0,fx,fy;
+    for(int i=1;i<=m;i++){
+        fx=find(edge[i].x);
+        fy=find(edge[i].y);
+        if(fx==fy) continue;
+        ans+=edge[i].z;
+        fa[fx]=fy;
+    }
+    cout << ans << endl;
+    return 0;
+}
+
+
+
+
+// #include<bits/stdc++.h>
+
+// using namespace std;
+
+// typedef struct{
+//     int t,l,nxt;
+// }E;
+// E edge[1010110];
+// int head[101010];
+// int cnt;
+
+
+// int n,m;
+
+// void insert(int a,int b,int v){
+//     edge[++cnt].t=b;
+//     edge[cnt].l=v;
+//     edge[cnt].nxt=head[a];
+//     head[a]=cnt;
+// }
+
+
+// struct ty{
+//     int x,len;
+//     bool operator < (const ty &a) const {
+//         return len>a.len;
+//     }
+// };
+
+// int dis[101010],vis[101010];
+// priority_queue<ty>q;
+// int prim(){
+//     int ans=0;
+//     memset(dis,0x3f,sizeof(dis));
+//     memset(vis,0,sizeof(vis));
+//     vis[1]=1;
+//     for(int i=head[1];i!=-1;i=edge[i].nxt){
+//         ty tmp;
+//         tmp.x=edge[i].t;
+//         tmp.len=edge[i].l;
+//         // dis[tmp.x]=tmp.len;
+//         q.push(tmp);
+//     }
+//     while(!q.empty()){
+//         ty tmp=q.top();
+//         q.pop();
+//         if(vis[tmp.x]) continue;
+//         vis[tmp.x]=1;
+//         ans+=tmp.len;
+//         for(int i=head[tmp.x];i!=-1;i=edge[i].nxt){
+//             if(vis[edge[i].t])continue;
+//             if(dis[edge[i].t]<=edge[i].l) continue;
+//             ty tmp;
+//             tmp.x=edge[i].t;
+//             tmp.len=edge[i].l;
+//             q.push(tmp);            
+//         }
+//     }
+//     return ans;
+// }
+// int main(){
+//     memset(head,-1,sizeof(head));
+//     cin >> n >> m;
+//     for(int i=0;i<m;i++){
+//         int a,b,v;
+//         cin >> a >> b >> v;
+//         insert(a,b,v);
+//         insert(b,a,v);
+//     }
+//     cout << prim() << endl;
+//     return 0;
+// }
